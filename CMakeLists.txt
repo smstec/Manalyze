@@ -5,11 +5,10 @@ project (manalyze)
 option(GitHub "Allow checking out third-party projects from GitHub" ON)
 option(Tests "Generate unit tests" OFF)
 
-if (WIN32)
-    set(Boost_USE_STATIC_LIBS ON)
-    set(Boost_USE_MULTITHREADED ON)
-    set(Boost_USE_STATIC_RUNTIME ON)
-endif()
+
+set(Boost_USE_STATIC_LIBS ON)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME ON)
 
 if (GitHub MATCHES [Oo][Nn])
     find_package(Git REQUIRED)
